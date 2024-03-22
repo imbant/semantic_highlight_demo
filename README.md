@@ -8,7 +8,7 @@ In the language server(implemented by Node.js based on the `vscode-languageserve
 ![image](https://github.com/imbant/semantic_highlight_demo/assets/17983739/12c64792-0de6-441e-9d19-4ee7c6a30463)
 
 
-The code for providing semantic tokens between the language server and the client is almost exactly the same.
+The code for providing semantic tokens between the [language server](https://github.com/imbant/semantic_highlight_demo/blob/56c74f7b6ce0e1a0c46a0a623b07fe7203f55b27/server/src/server.ts#L39-L46) and the [client](https://github.com/imbant/semantic_highlight_demo/blob/56c74f7b6ce0e1a0c46a0a623b07fe7203f55b27/client/src/extension.ts#L74-L81) is almost exactly the same.
 ![image](https://github.com/imbant/semantic_highlight_demo/assets/17983739/d1f42ad0-b5f7-4bf1-98fe-ce2e32a2dd00)
 
 
