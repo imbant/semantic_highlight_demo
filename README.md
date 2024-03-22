@@ -5,8 +5,12 @@ Compare the behavior of [semantic highlighting](https://microsoft.github.io/lang
 For the semantic highlighting provided by the language client, when the order of the semantic tokens is inconsistent with the order of the tokens in the character stream, it can be highlighted correctly.
 
 In the language server(implemented by Node.js based on the `vscode-languageserver/node` npm package), when the order is inconsistent, the highlighting is incorrect, and only tokens in increasing order are highlighted.
+![image](https://github.com/imbant/semantic_highlight_demo/assets/17983739/12c64792-0de6-441e-9d19-4ee7c6a30463)
+
 
 The code for providing semantic tokens between the language server and the client is almost exactly the same.
+![image](https://github.com/imbant/semantic_highlight_demo/assets/17983739/d1f42ad0-b5f7-4bf1-98fe-ce2e32a2dd00)
+
 
 ## doubt:
 
