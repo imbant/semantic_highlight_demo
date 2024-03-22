@@ -17,11 +17,6 @@ const documents: TextDocuments<TextDocument> = new TextDocuments(TextDocument);
 connection.onInitialize((params: InitializeParams) => {
 	const result: InitializeResult = {
 		capabilities: {
-			textDocumentSync: TextDocumentSyncKind.Incremental,
-			// Tell the client that this server supports code completion.
-			completionProvider: {
-				resolveProvider: true,
-			},
 			semanticTokensProvider: {
 				full: false,
 				range: true,
@@ -42,8 +37,11 @@ connection.listen();
 
 connection.languages.semanticTokens.onRange(async (params, token, _, resultProgress) => {
 	const builder = new SemanticTokensBuilder();
+	// comment
 	builder.push(1, 5, 7, 0, 0);
+	// keyword
 	builder.push(1, 24, 7, 2, 0);
+	// string, before keyword, not in increasing order
 	builder.push(1, 15, 6, 1, 0);
 	return builder.build();
 });

@@ -76,8 +76,11 @@ class DocumentRangeSemanticTokensProvider
 		token: vscode.CancellationToken
 	): Promise<vscode.SemanticTokens> {
 		const builder = new vscode.SemanticTokensBuilder();
+		// comment
 		builder.push(1, 5, 7, 0);
+		// keyword
 		builder.push(1, 24, 7, 2);
+		// string, before keyword, not in increasing order
 		builder.push(1, 15, 6, 1);
 		return builder.build();
 	}
