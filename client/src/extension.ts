@@ -70,11 +70,7 @@ export function deactivate(): Thenable<void> | undefined {
 class DocumentRangeSemanticTokensProvider
 	implements vscode.DocumentRangeSemanticTokensProvider
 {
-	async provideDocumentRangeSemanticTokens(
-		document: vscode.TextDocument,
-		range: vscode.Range,
-		token: vscode.CancellationToken
-	): Promise<vscode.SemanticTokens> {
+	provideDocumentRangeSemanticTokens() {
 		const builder = new vscode.SemanticTokensBuilder();
 		// comment
 		builder.push(1, 5, 7, 0);

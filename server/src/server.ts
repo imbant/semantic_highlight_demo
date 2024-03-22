@@ -35,7 +35,7 @@ documents.listen(connection);
 
 connection.listen();
 
-connection.languages.semanticTokens.onRange(async (params, token, _, resultProgress) => {
+connection.languages.semanticTokens.onRange(() => {
 	const builder = new SemanticTokensBuilder();
 	// comment
 	builder.push(1, 5, 7, 0, 0);
